@@ -1,0 +1,219 @@
+body, html {
+	font-weight: 400;
+	font-family: "Verb", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Georgia", sans-serif;
+	font-size: 16px;
+	line-height: 1.3em;
+	margin: 0;
+	position: relative;
+}
+
+p, h1, h2, h3, a {
+	line-height: 1.3em;
+	color: inherit;
+	font-weight: normal;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	padding: 0;
+}
+
+.box {
+	z-index: 10;
+	width: 100%;
+	padding: 40px 0px;
+	position: relative;
+	-webkit-transition: 'max-height 0.4s ease, opacity 0.4s ease';
+	-moz-transition: 'max-height 0.4s ease, opacity 0.4s ease';
+	-ms-transition: 'max-height 0.4s ease, opacity 0.4s ease';
+	-o-transition: 'max-height 0.4s ease, opacity 0.4s ease';
+}
+
+.box-dark {
+	background-color: #484848;
+	color: white;
+}
+
+
+.box-light {
+	background-color: white;
+	color: #484848;
+}
+
+.box-top {
+	height: 250px;
+	min-height: 0;
+	top: 0;
+	left: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.box-header .line {
+	bottom: auto;
+	top: 0px;
+	height: 550px;
+}
+
+.box-dark .line {
+	background-color: white;
+	color: #484848;
+}
+
+.box-light .line {
+	background-color: #484848;
+	color: white;
+}
+
+.line {
+	position: absolute;
+	top: -20px;
+	bottom: 0;
+	left: 50%;
+	width: 1px;
+}
+
+.box-header .image {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top: -100px;
+	left: 50%;
+	margin-left: -100px;
+	z-index: 100;
+	border: #ffffff;
+	background: white;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 100px;
+	overflow: hidden;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	 -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.21); 
+	 -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.21); 
+	 box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.21); 
+}
+
+.box-header .details {
+	max-width: 600px;
+	margin: 30px auto;
+	margin-top: 40px;
+	padding-bottom: 20px;
+	background: inherit;
+	text-align: center;
+	position: relative;
+	z-index: 20;
+}
+
+.box-header .details .details-background {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	bottom: 50%;
+	-webkit-transition: 'top 1s ease, bottom 1s ease';
+	-moz-transition: 'top 1s ease, bottom 1s ease';
+	-ms-transition: 'top 1s ease, bottom 1s ease';
+	-o-transition: 'top 1s ease, bottom 1s ease';
+}
+
+.box-header .details .details-content {
+	opacity: 1;
+	position: relative;
+	-webkit-transition: opacity 1s ease 1s;
+	-moz-transition: opacity 1s ease 1s;
+	-ms-transition: opacity 1s ease 1s;
+	-o-transition: opacity 1s ease 1s;
+}
+
+.box-header .details .detail-nav {
+	text-align: center;
+}
+
+.box-header .details .detail-nav ul {
+	text-align: center;
+}
+.box-header .details .detail-nav ul {
+	list-style-type: none;
+	display: inline-block;
+}
+
+.box-header .details .detail-nav li {
+	display: inline-block;
+}
+
+.box-header .details .detail-nav li a {
+	padding: 5px;
+	text-decoration: none;
+	text-shadow: 0 1px 0 #fff;
+	text-transform: uppercase;
+	display: inline-block;
+}
+
+.square-top {
+	bottom: auto;
+	top: 0px;
+	background: inherit;
+}
+.square {
+	width: 31px;
+	height: 31px;
+	margin: -15px;
+	-webkit-transform: rotate(315deg);
+	-moz-transform: rotate(315deg);
+	-ms-transform: rotate(315deg);
+	-o-transform: rotate(315deg);
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+}
+
+.box .box-title {
+	text-align: right;
+	padding-right: 20px;
+	margin-top: -30px;
+	padding-bottom: 30px;
+	text-transform: uppercase;
+}
+
+.box:not(.box-header):not(.box-top):last-of-type div.line:before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	margin-left: -31px;
+	width: 61px;
+	height: 61px;
+	display: block;
+	border-radius: 31px;
+	background: inherit;
+	color: inherit;
+}
+
+.box:not(.box-header):not(.box-top):last-of-type div.line:after {
+	content: "END";
+	position: absolute;
+	bottom: 0px;
+	margin-left: -31px;
+	width: 61px;
+	line-height: 60px;
+	text-align: center;
+	display: block;
+	color: inherit;
+}
+
+.box:not(.box-header):not(.box-top):last-of-type {
+	padding-bottom: 200px;
+}
+
+.box:last-of-type .line {
+	bottom: 100px;
+}
+
