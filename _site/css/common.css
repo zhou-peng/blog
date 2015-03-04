@@ -63,9 +63,8 @@ ul {
 }
 
 .box-header .line {
-	bottom: auto;
-	top: 0px;
-	height: 550px;
+	bottom: 0;
+	top: 0;
 }
 
 .box-dark .line {
@@ -239,7 +238,7 @@ div.box.box-header {
 	padding-bottom: 200px;
 }
 
-.box:last-of-type .line {
+.box:not(.box-header):not(.box-top):last-of-type .line {
 	bottom: 100px;
 }
 
