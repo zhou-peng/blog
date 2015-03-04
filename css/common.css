@@ -28,10 +28,10 @@ ul {
 	width: 100%;
 	padding: 40px 0px;
 	position: relative;
-	-webkit-transition: 'max-height 0.4s ease, opacity 0.4s ease';
-	-moz-transition: 'max-height 0.4s ease, opacity 0.4s ease';
-	-ms-transition: 'max-height 0.4s ease, opacity 0.4s ease';
-	-o-transition: 'max-height 0.4s ease, opacity 0.4s ease';
+	-webkit-transition: max-height 0.4s ease, opacity 0.4s ease;
+	-moz-transition: max-height 0.4s ease, opacity 0.4s ease;
+	-ms-transition: max-height 0.4s ease, opacity 0.4s ease;
+	-o-transition: max-height 0.4s ease, opacity 0.4s ease;
 }
 
 .box-dark {
@@ -46,13 +46,20 @@ ul {
 }
 
 .box-top {
-	height: 250px;
-	min-height: 0;
-	top: 0;
-	left: 0;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	padding-bottom: 88px;
+	min-height: 150px;
+	text-align: center;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	top: 0;
+	left: 0;
+	right: 0;
 }
 
 .box-header .line {
@@ -79,10 +86,17 @@ ul {
 	width: 1px;
 }
 
-div.box.box-header.open {
+.box.box-header.open {
 	-webkit-animation: header-animate-slide 1.6s 0 cubic-bezier(0.5, 0.24, 0.49, 0.94);
 	-moz-animation: header-animate-slide 1.6s 0 cubic-bezier(0.5, 0.24, 0.49, 0.94);
 	-ms-animation: header-animate-slide 1.6s 0 cubic-bezier(0.5, 0.24, 0.49, 0.94);
+}
+
+div.box.box-header {
+	padding-top: 100px;
+	padding-bottom: 30px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 .box-header .image {
@@ -126,14 +140,18 @@ div.box.box-header.open {
 	right: 0;
 	top: 50%;
 	bottom: 50%;
-	-webkit-transition: 'top 1s ease, bottom 1s ease';
-	-moz-transition: 'top 1s ease, bottom 1s ease';
-	-ms-transition: 'top 1s ease, bottom 1s ease';
-	-o-transition: 'top 1s ease, bottom 1s ease';
+	-webkit-transition: top 1s ease, bottom 1s ease;
+	-moz-transition: top 1s ease, bottom 1s ease;
+	-ms-transition: top 1s ease, bottom 1s ease;
+	-o-transition: top 1s ease, bottom 1s ease;
+}
+
+.box-header.open .details .details-content {
+	opacity: 1;
 }
 
 .box-header .details .details-content {
-	opacity: 1;
+	opacity: 0;
 	position: relative;
 	-webkit-transition: opacity 1s ease 1s;
 	-moz-transition: opacity 1s ease 1s;
