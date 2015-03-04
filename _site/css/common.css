@@ -16,6 +16,7 @@ p, h1, h2, h3, a {
 ul {
 	margin: 0;
 	padding: 0;
+	list-style: none;
 }
 
 .container {
@@ -215,5 +216,169 @@ ul {
 
 .box:last-of-type .line {
 	bottom: 100px;
+}
+
+.box .point {
+	position: relative;
+	width: 50%;
+	margin-top: -10px;
+	min-height: 60px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.point {
+	-webkit-transition: opacity 0.4s ease;
+	-moz-transition: opacity 0.4s ease;
+	-ms-transition: opacity 0.4s ease;
+	-o-transition: opacity 0.4s ease;
+}
+
+.point.point-icon .circle {
+	height: 31px;
+	width: 31px;
+	line-height: 31px;
+}
+
+.point-right {
+	margin-left: 50%;
+}
+
+.point-left .circle {
+	right: 0px;
+}
+.point .circle {
+	position: absolute;
+	top: 0px;
+	height: 20px;
+	width: 20px;
+}
+.circle {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.point-left .circle > div {
+	left: auto;
+	right: 0;
+}
+.point-right .circle {
+	left: 0px;
+}
+
+.circle > div {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	margin-left: -50%;
+	margin-right: -50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.point-left .point-container {
+	margin-left: auto;
+	margin-right: 0px;
+	text-align: right;
+	padding-right: 50px;
+	padding-left: 20px;
+}
+.point-right .point-container {
+	padding-left: 50px;
+	padding-right: 20px;
+}
+.point .point-container {
+	max-width: 400px;
+	padding-top: 2px;
+	position: relative;
+}
+
+.point .content > *:first-child {
+	margin-top: 0px;
+	padding-top: 0px;
+	font-size: 18px;
+}
+.point h2 {
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+	margin-top: 0px;
+	padding-top: 0px;
+	font-size: 18px;
+	margin-bottom: 0;
+}
+
+.box-dark .circle {
+	color: #484848;
+}
+
+.box-light .circle {
+	color: white;
+}
+
+.box-dark .circle > div {
+	background-color: white;
+}
+
+.box-light .circle > div {
+	background-color: #484848;
+}
+
+
+
+@media (max-width: 600px) {
+	.box-header div.line {
+	    display: none;
+	}
+	.point-left .circle {
+		right: auto;
+		left: 0;
+	}
+	.point-left .point-container {
+		margin-left: 0px;
+		margin-right: auto;
+		text-align: left;
+		padding-right: 0px;
+	}
+	.point-left .circle > div {
+		left: 0;
+		right: auto;
+	}
+	.box .point .point-container {
+		padding-left: 40px;
+	}
+	.point .point-container {
+		padding-right: 5px;
+	}
+}
+
+@media (max-width: 600px) and (min-width: 480px) {
+  div.line,
+  .square {
+    left: 80px;
+  }
+  .box .point {
+	width: 85%;
+	margin-top: 0;
+	margin-left: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  div.line,
+  .square {
+    left: 40px;
+  }
+  .box .point {
+	width: 85%;
+	margin-top: 0;
+	margin-left: 40px;
+  }
 }
 
